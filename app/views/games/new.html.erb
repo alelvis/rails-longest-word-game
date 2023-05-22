@@ -1,0 +1,16 @@
+<div class="container text-center">
+  <h1>Try to find the longest word possible with these letters</h1>
+  <div id="rand-letters">
+      <%@letters.each do |letter| %>
+        <p class="btn btn-primary m-2 letter"><%=letter%></p>
+      <%end%>
+  </div>
+  <form action="/score" method="POST" data-turbo="false">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters %>
+    <%= hidden_field_tag :start_time, @start_time %>
+    <label for="attempt">Write your word below</label><br>
+    <input type="text" id="attempt" name="attempt">
+    <input type="submit" Value="Confirm">
+  </form>
+</div>

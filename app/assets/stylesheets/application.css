@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#rand-letters {
+  display: flex;
+  justify-content: center;
+}
+
+.letter:hover {
+  cursor: default;
+  background-color: #0d6efd !important;
+}
+
+.text-center {
+  text-align: center;
+}
